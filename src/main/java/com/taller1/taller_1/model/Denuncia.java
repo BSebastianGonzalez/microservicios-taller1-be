@@ -32,4 +32,8 @@ public class Denuncia {
     @JsonManagedReference
     private List<Categoria> categorias = new ArrayList<>();
 
+    @ManyToOne
+    @JoinColumn(name = "estado_id")
+    @JsonManagedReference
+    private Estado estado;
 }
