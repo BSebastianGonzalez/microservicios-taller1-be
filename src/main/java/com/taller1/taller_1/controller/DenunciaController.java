@@ -1,5 +1,6 @@
 package com.taller1.taller_1.controller;
 
+import com.taller1.taller_1.dto.ConsultaDenunciaDTO;
 import com.taller1.taller_1.dto.DenunciaDTO;
 import com.taller1.taller_1.model.Categoria;
 import com.taller1.taller_1.model.Denuncia;
@@ -61,5 +62,18 @@ public class DenunciaController {
     public ResponseEntity<Void> borrarDenuncia(@PathVariable Long id) {
         denunciaService.borrarDenuncia(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/token/{token}")
+    public ResponseEntity<ConsultaDenunciaDTO> obtenerDenunciaPorToken(@PathVariable String token) {
+        return denunciaService.obtenerDenunciaPorToken(token)
+                .map(denuncia -> {
+                    ConsultaDenunciaDTO dto = new ConsultaDenunciaDTO(
+                            denuncia.getTitulo(),
+                            denuncia.getEstado()
+                    );
+                    return ResponseEntity.ok(dto);
+                })
+                .orElse(ResponseEntity.notFound().build());
     }
 }

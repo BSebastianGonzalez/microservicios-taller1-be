@@ -1,5 +1,6 @@
 package com.taller1.taller_1.controller;
 
+import com.taller1.taller_1.dto.CategoriaDTO;
 import com.taller1.taller_1.model.Categoria;
 import com.taller1.taller_1.service.CategoriaService;
 import lombok.RequiredArgsConstructor;
@@ -27,7 +28,11 @@ public class CategoriaController {
     }
 
     @PostMapping
-    public Categoria createCategoria(@RequestBody Categoria categoria) {
+    public Categoria createCategoria(@RequestBody CategoriaDTO categoriaDTO) {
+
+        Categoria categoria = new Categoria();
+        categoria.setNombre(categoriaDTO.getTitulo());
+        categoria.setDescripcion(categoriaDTO.getDescripcion());
         return categoriaService.crearCategoria(categoria);
     }
 

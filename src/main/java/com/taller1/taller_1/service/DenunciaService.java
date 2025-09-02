@@ -36,4 +36,7 @@ public class DenunciaService {
         denunciaRepository.deleteById(id);
     }
 
+    public Optional<Denuncia> obtenerDenunciaPorToken(String token) {
+        return denunciaRepository.findByTokenSeguimiento(token);
+    }
 }
