@@ -1,6 +1,8 @@
 package com.taller1.taller_1.service;
 
+import com.taller1.taller_1.model.Categoria;
 import com.taller1.taller_1.model.Denuncia;
+import com.taller1.taller_1.repository.CategoriaRepository;
 import com.taller1.taller_1.repository.DenunciaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,7 @@ public class DenunciaService {
 
     @Autowired
     private final DenunciaRepository denunciaRepository;
+    private final CategoriaRepository categoriaRepository;
 
     public List<Denuncia> obtenerDenuncias() {
         return denunciaRepository.findAll();
@@ -29,6 +32,11 @@ public class DenunciaService {
     public Denuncia crearDenuncia(Denuncia denuncia) {
         denuncia.setFechaCreacion(new Date());
         denuncia.setTokenSeguimiento(UUID.randomUUID().toString());
+
+        for (Categoria categoria : denuncia.getCategorias()) {
+            categoria.setTotalDenuncias(categoria.getTotalDenuncias() + 1);
+            categoriaRepository.save(categoria);
+        }
         return denunciaRepository.save(denuncia);
     }
 
