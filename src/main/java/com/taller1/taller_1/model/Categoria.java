@@ -25,6 +25,8 @@ public class Categoria {
     @ManyToMany(mappedBy = "categorias")
     @JsonBackReference
     private List<Denuncia> denuncias = new ArrayList<>();
+
+    private int totalDenuncias;
 }
 
 
