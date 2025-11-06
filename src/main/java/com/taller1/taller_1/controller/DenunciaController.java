@@ -69,6 +69,7 @@ public class DenunciaController {
         return denunciaService.obtenerDenunciaPorToken(token)
                 .map(denuncia -> {
                     ConsultaDenunciaDTO dto = new ConsultaDenunciaDTO(
+                            denuncia.getId(),
                             denuncia.getTitulo(),
                             denuncia.getEstado()
                     );

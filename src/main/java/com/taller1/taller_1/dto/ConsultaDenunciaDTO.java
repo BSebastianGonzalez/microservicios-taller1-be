@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class ConsultaDenunciaDTO {
+    private Long id;
     private String titulo;
     private Estado estado;
 }
