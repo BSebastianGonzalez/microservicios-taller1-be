@@ -1,6 +1,7 @@
 package com.taller1.taller_1.controller;
 
 import com.taller1.taller_1.dto.CategoriaDTO;
+import com.taller1.taller_1.dto.EstadisticaCategoriaDTO;
 import com.taller1.taller_1.model.Categoria;
 import com.taller1.taller_1.service.CategoriaService;
 import lombok.RequiredArgsConstructor;
@@ -40,5 +41,10 @@ public class CategoriaController {
     public ResponseEntity<Void> deleteCategoria(@PathVariable Long id) {
         categoriaService.borrarCategoria(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/categorias")
+    public List<EstadisticaCategoriaDTO> obtenerEstadisticas() {
+        return categoriaService.obtenerEstadisticasPorCategoria();
     }
 }

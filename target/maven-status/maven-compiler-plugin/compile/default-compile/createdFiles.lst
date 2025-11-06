@@ -13,6 +13,7 @@ com\taller1\taller_1\model\Estado.class
 com\taller1\taller_1\listener\RespuestaListener.class
 com\taller1\taller_1\dto\ConsultaDenunciaDTO.class
 com\taller1\taller_1\model\Categoria.class
+com\taller1\taller_1\dto\EstadisticaCategoriaDTO.class
 com\taller1\taller_1\dto\DenunciaDTO.class
 com\taller1\taller_1\event\RespuestaRegistradaEvent.class
 com\taller1\taller_1\Taller1Application.class
