@@ -36,16 +36,14 @@ public class CategoriaService {
     public List<EstadisticaCategoriaDTO> obtenerEstadisticasPorCategoria() {
         List<Categoria> categorias = categoriaRepository.findAll();
 
-        // 1️⃣ Calcular total de denuncias global sumando el campo totalDenuncias
         int totalDenunciasGlobal = categorias.stream()
                 .mapToInt(Categoria::getTotalDenuncias)
                 .sum();
 
-        if (totalDenunciasGlobal == 0) totalDenunciasGlobal = 1; // evitar división por 0
+        if (totalDenunciasGlobal == 0) totalDenunciasGlobal = 1;
 
-        final int total = totalDenunciasGlobal; // ✅ variable final para usar dentro de lambda
+        final int total = totalDenunciasGlobal;
 
-        // 2️⃣ Mapear cada categoría con su porcentaje y total global
         return categorias.stream()
                 .map(c -> {
                     double porcentaje = (c.getTotalDenuncias() * 100.0) / total;
