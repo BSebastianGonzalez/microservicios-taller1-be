@@ -1,4 +1,3 @@
-// java
 package com.taller1.taller_1.listener;
 
 import com.taller1.taller_1.event.RespuestaRegistradaEvent;
@@ -28,11 +27,9 @@ public class RespuestaListener {
         if (opt.isPresent()) {
             Denuncia denuncia = opt.get();
 
-            // Buscar el estado con ID = 5
             Estado estadoRespondida = estadoRepository.findById(5L)
                     .orElseThrow(() -> new RuntimeException("Estado con ID 5 no encontrado"));
 
-            // Actualizar el estado de la denuncia
             denuncia.setEstado(estadoRespondida);
 
             denunciaRepository.save(denuncia);
