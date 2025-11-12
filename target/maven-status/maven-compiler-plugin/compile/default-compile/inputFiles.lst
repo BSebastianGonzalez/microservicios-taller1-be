@@ -9,7 +9,9 @@ C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservi
 C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\taller-1\src\main\java\com\taller1\taller_1\dto\DenunciaDTO.java
 C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\taller-1\src\main\java\com\taller1\taller_1\dto\EstadisticaCategoriaDTO.java
 C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\taller-1\src\main\java\com\taller1\taller_1\dto\EstadoDTO.java
+C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\taller-1\src\main\java\com\taller1\taller_1\event\DenunciaArchivadaEvent.java
 C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\taller-1\src\main\java\com\taller1\taller_1\event\RespuestaRegistradaEvent.java
+C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\taller-1\src\main\java\com\taller1\taller_1\listener\ArchivamientoListener.java
 C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\taller-1\src\main\java\com\taller1\taller_1\listener\RespuestaListener.java
 C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\taller-1\src\main\java\com\taller1\taller_1\model\ArchivoDenuncia.java
 C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\taller-1\src\main\java\com\taller1\taller_1\model\Categoria.java

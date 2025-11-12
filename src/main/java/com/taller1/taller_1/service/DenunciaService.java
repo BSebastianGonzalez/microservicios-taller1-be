@@ -32,6 +32,7 @@ public class DenunciaService {
     public Denuncia crearDenuncia(Denuncia denuncia) {
         denuncia.setFechaCreacion(new Date());
         denuncia.setTokenSeguimiento(UUID.randomUUID().toString());
+        denuncia.setArchivado(false);
 
         for (Categoria categoria : denuncia.getCategorias()) {
             categoria.setTotalDenuncias(categoria.getTotalDenuncias() + 1);
@@ -46,5 +47,9 @@ public class DenunciaService {
 
     public Optional<Denuncia> obtenerDenunciaPorToken(String token) {
         return denunciaRepository.findByTokenSeguimiento(token);
+    }
+
+    public List<Denuncia> obtenerDenunciasArchivadas() {
+        return denunciaRepository.findByArchivadoTrue();
     }
 }
