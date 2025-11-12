@@ -2,7 +2,6 @@ com\taller1\taller_1\config\CloudinaryConfig.class
 com\taller1\taller_1\repository\CategoriaRepository.class
 com\taller1\taller_1\controller\EstadoController.class
 com\taller1\taller_1\repository\EstadoRepository.class
-com\taller1\taller_1\config\WebConfig.class
 com\taller1\taller_1\service\ArchivoDenunciaService.class
 com\taller1\taller_1\dto\CategoriaDTO.class
 com\taller1\taller_1\config\RabbitConfig.class
