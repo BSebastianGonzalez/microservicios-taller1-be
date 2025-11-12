@@ -52,4 +52,8 @@ public class DenunciaService {
     public List<Denuncia> obtenerDenunciasArchivadas() {
         return denunciaRepository.findByArchivadoTrue();
     }
+
+    public List<Denuncia> obtenerDenunciasNoArchivadas() {
+        return denunciaRepository.findByArchivadoFalse();
+    }
 }
