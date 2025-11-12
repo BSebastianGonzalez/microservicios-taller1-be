@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface DenunciaRepository extends JpaRepository<Denuncia,Long> {
     Optional<Denuncia> findByTokenSeguimiento(String token);
     List<Denuncia> findByArchivadoTrue();
+    List<Denuncia> findByArchivadoFalse();
 }

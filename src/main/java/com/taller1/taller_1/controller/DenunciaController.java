@@ -93,4 +93,18 @@ public class DenunciaController {
                     .body("Error al consultar denuncias archivadas: " + e.getMessage());
         }
     }
+
+    @GetMapping("/no-archivadas")
+    public ResponseEntity<?> obtenerDenunciasNoArchivadas() {
+        try {
+            List<Denuncia> noArchivadas = denunciaService.obtenerDenunciasNoArchivadas();
+            if (noArchivadas.isEmpty()) {
+                return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+            }
+            return ResponseEntity.ok(noArchivadas);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error al consultar denuncias no archivadas: " + e.getMessage());
+        }
+    }
 }
